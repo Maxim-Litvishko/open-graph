@@ -2,8 +2,6 @@ import { readFileSync } from 'fs';
 import Head from 'next/head';
 import Image from 'next/image';
 
-const { VERCEL_URL } = process.env
-
 export default function Page() {
   return <>
     <Head>
@@ -14,7 +12,7 @@ export default function Page() {
       <meta property="og:description"
         content="Custom software development for your needs. Front-end · Back-end · Mobile Development · DevOps · QA & Testing provided by a reliable tech company." />
       <meta property="og:image"
-        content="https://open-graph-dl8g.vercel.app/_next/image?url=custom-head2.jpg&w=1200&q=75" />
+        content="https://modsen-software-git-mp-eie9ah-modsen-team.vercel.app/_next/image?url=images/custom-head/opengraph-image.jpg&w=1200&q=75" />
       <meta property="og:site_name" content="Modsen" />
       <meta property="og:locale" content="en_US" />
       <title>Modsen | Modern Software Engineering</title>
