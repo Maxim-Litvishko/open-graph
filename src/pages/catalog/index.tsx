@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+
 const { VERCEL_URL } = process.env
 
 export default function Page() {
@@ -12,7 +13,7 @@ export default function Page() {
       <meta property="og:description"
         content="Custom software development for your needs. Front-end · Back-end · Mobile Development · DevOps · QA & Testing provided by a reliable tech company." />
       <meta property="og:image"
-        content="https://open-graph-dl8g.vercel.app/api/og" />
+        content="/custom-head2.jpg" />
       <meta property="og:site_name" content="Modsen" />
       <meta property="og:locale" content="en_US" />
       <title>Modsen | Modern Software Engineering</title>
