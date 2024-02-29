@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const { VERCEL_URL } = process.env
 
-export default function Page({ imgBase64 }: any) {
+export default function Page() {
   return <>
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +14,7 @@ export default function Page({ imgBase64 }: any) {
       <meta property="og:description"
         content="Custom software development for your needs. Front-end · Back-end · Mobile Development · DevOps · QA & Testing provided by a reliable tech company." />
       <meta property="og:image"
-        content={imgBase64} />
+        content="https://open-graph-dl8g.vercel.app/_next/image?url=custom-head2.jpg&w=1200&q=75" />
       <meta property="og:site_name" content="Modsen" />
       <meta property="og:locale" content="en_US" />
       <title>Modsen | Modern Software Engineering</title>
@@ -23,16 +23,4 @@ export default function Page({ imgBase64 }: any) {
 
     Test
   </>
-}
-
-export async function getServerSideProps() {
-  const imgPath = 'public/custom-head2.jpg';
-  const imgBuffer = readFileSync(imgPath);
-  const imgBase64 = Buffer.from(imgBuffer).toString('base64');
-
-  return {
-    props: {
-      imgBase64,
-    },
-  };
 }
