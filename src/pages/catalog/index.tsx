@@ -26,7 +26,7 @@ export default function Page({ imgBase64 }: any) {
 }
 
 export async function getServerSideProps() {
-  const imgPath = '/custom-head2.jpg';
+  const imgPath = 'public/custom-head2.jpg';
   const imgBuffer = readFileSync(imgPath);
   const imgBase64 = Buffer.from(imgBuffer).toString('base64');
 
