@@ -1,9 +1,10 @@
+import { readFileSync } from 'fs';
 import Head from 'next/head';
 import Image from 'next/image';
 
 const { VERCEL_URL } = process.env
 
-export default function Page() {
+export default function Page({ imgBase64 }: any) {
   return <>
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +14,7 @@ export default function Page() {
       <meta property="og:description"
         content="Custom software development for your needs. Front-end · Back-end · Mobile Development · DevOps · QA & Testing provided by a reliable tech company." />
       <meta property="og:image"
-        content="/custom-head2.jpg" />
+        content={imgBase64} />
       <meta property="og:site_name" content="Modsen" />
       <meta property="og:locale" content="en_US" />
       <title>Modsen | Modern Software Engineering</title>
@@ -22,4 +23,16 @@ export default function Page() {
 
     Test
   </>
+}
+
+export async function getServerSideProps() {
+  const imgPath = '/custom-head2.jpg';
+  const imgBuffer = readFileSync(imgPath);
+  const imgBase64 = Buffer.from(imgBuffer).toString('base64');
+
+  return {
+    props: {
+      imgBase64,
+    },
+  };
 }
