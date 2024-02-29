@@ -12,7 +12,7 @@ export default function Page() {
       <meta property="og:description"
         content="Custom software development for your needs. Front-end · Back-end · Mobile Development · DevOps · QA & Testing provided by a reliable tech company." />
       <meta property="og:image"
-        content="https://open-graph-dl8g.vercel.app/api/og/api/og" />
+        content="https://open-graph-dl8g.vercel.app/api/og" />
       <meta property="og:site_name" content="Modsen" />
       <meta property="og:locale" content="en_US" />
       <title>Modsen | Modern Software Engineering</title>
